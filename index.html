@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rakesh M H — Final-Year B.Tech CSE (Cybersecurity) student at Presidency University, Bengaluru. Cybersecurity Researcher, OSINT Developer, Full-Stack Developer. Open to Security Analyst, SOC Analyst, and Software Engineer opportunities." />
+  <meta name="keywords" content="Rakesh MH, cybersecurity portfolio, SOC analyst, security researcher, OSINT, ethical hacking, Presidency University, Bengaluru" />
+  <meta property="og:title" content="Rakesh M H | Cybersecurity Portfolio" />
+  <meta property="og:description" content="Final-Year B.Tech CSE (Cybersecurity) — Cybersecurity Researcher · Security Enthusiast · Full-Stack Developer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/quantum_vault.jpg" />
+  <meta name="theme-color" content="#0a0e14" />
+  <title>Rakesh M H | Cybersecurity Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Matrix Rain Canvas -->
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+  <!-- CRT Scanline Overlay -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Rakesh M H — Home">
+        <span class="logo-bracket">[</span>RMH<span class="logo-bracket">]</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#home"          class="nav-link" data-section="home">Home</a></li>
+        <li><a href="#profiles"      class="nav-link" data-section="profiles">Active On</a></li>
+        <li><a href="#about"         class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills"        class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects"      class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+        <li><a href="#contact"       class="nav-link" data-section="contact">Contact</a></li>
+        <li>
+          <a href="https://github.com/RakeshMH2003" target="_blank" rel="noopener noreferrer" class="nav-link nav-github">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </li>
+      </ul>
+
+      <div class="nav-status" aria-label="System status">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="status-text">SYS_ACTIVE</span>
+        <span class="ping-text">PING: <span id="ping-val">19</span>ms</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════ -->
+  <section id="home" class="section hero-section" aria-labelledby="hero-name">
+    <div class="hero-container">
+
+      <!-- Terminal Header Bar -->
+      <div class="terminal-bar" aria-hidden="true">
+        <div class="terminal-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <span class="terminal-title">TERMINAL // PRESIDENCY_BENGALURU</span>
+        <span class="terminal-status">● ACTIVE RESEARCHER</span>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <div class="hero-left">
+          <div class="hero-label">
+            <span class="prompt">&gt; </span>
+            <span class="label-text">Focus: <span class="accent">Problem Solver</span></span>
+          </div>
+
+          <h1 id="hero-name" class="hero-name glitch" data-text="Rakesh M H">Rakesh M H</h1>
+
+          <div class="hero-title">
+            <span class="title-prefix">$</span>
+            <span class="typed-text" id="typed-text" aria-live="polite"></span>
+            <span class="cursor" aria-hidden="true">_</span>
+          </div>
+
+          <p class="hero-pitch">
+            Final-Year B.Tech CSE (Cybersecurity) · Cybersecurity Researcher · Security Enthusiast · Full-Stack Developer
+          </p>
+          <p class="hero-open">
+            <span class="accent">Open to:</span> Security Analyst · SOC Analyst · Cybersecurity Engineer · Software Engineer
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary" id="hero-view-projects">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              View Projects
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="hero-contact">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+              Contact Me
+            </a>
+            <a href="rakeshmh.pdf" class="btn btn-ghost" id="hero-resume" download>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="hero-right">
+          <div class="stats-panel" role="region" aria-label="Quick stats">
+            <div class="stats-header">
+              <span class="prompt">&gt;</span> SYS_STATUS: <span class="accent">ACTIVE RESEARCHER</span>
+            </div>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <span class="stat-label">Education</span>
+                <span class="stat-value">B.Tech CSE<br><small>(Cybersecurity)</small></span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">University</span>
+                <span class="stat-value">Presidency<br><small>University</small></span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">CGPA</span>
+                <span class="stat-value accent-text" id="cgpa-counter">7.10</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Projects</span>
+                <span class="stat-value accent-text"><span class="counter" data-target="5">0</span>+</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Certifications</span>
+                <span class="stat-value accent-text"><span class="counter" data-target="12">0</span></span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Location</span>
+                <span class="stat-value">Bengaluru<br><small>India</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PROFILES & CONTRIBUTIONS
+  ═══════════════════════════════════════ -->
+  <section id="profiles" class="section profiles-section" aria-labelledby="profiles-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 00</span>
+        <h2 id="profiles-heading" class="section-title">Active On<span class="accent">.</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <p class="profiles-subtitle">> Currently active across security platforms &amp; open-source communities</p>
+
+      <div class="profiles-grid">
+
+        <!-- GitHub -->
+        <a href="https://github.com/RakeshMH2003" target="_blank" rel="noopener noreferrer" class="profile-card" id="profile-github" aria-label="GitHub Profile">
+          <div class="profile-icon">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div class="profile-info">
+            <h3 class="profile-name">GitHub</h3>
+            <span class="profile-handle">@RakeshMH2003</span>
+            <span class="profile-desc">Open-source projects & security tools</span>
+          </div>
+          <div class="profile-arrow">→</div>
+          <div class="profile-glow" aria-hidden="true"></div>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/rakesh-m-h/" target="_blank" rel="noopener noreferrer" class="profile-card" id="profile-linkedin" aria-label="LinkedIn Profile">
+          <div class="profile-icon profile-icon-linkedin">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="profile-info">
+            <h3 class="profile-name">LinkedIn</h3>
+            <span class="profile-handle">Rakesh M H</span>
+            <span class="profile-desc">Professional network & career updates</span>
+          </div>
+          <div class="profile-arrow">→</div>
+          <div class="profile-glow" aria-hidden="true"></div>
+        </a>
+
+        <!-- TryHackMe -->
+        <a href="https://tryhackme.com/p/rakeshmh13" target="_blank" rel="noopener noreferrer" class="profile-card" id="profile-tryhackme" aria-label="TryHackMe Profile">
+          <div class="profile-icon profile-icon-thm">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M10.705 0C7.54 0 4.902 2.285 4.349 5.291a4.525 4.525 0 0 0-4.107 4.5 4.525 4.525 0 0 0 4.52 4.52h6.761a.625.625 0 1 0 0-1.25H4.762a3.273 3.273 0 0 1-3.27-3.27 3.273 3.273 0 0 1 2.97-3.26l.534-.046.082-.53A4.81 4.81 0 0 1 10.705 1.25a4.81 4.81 0 0 1 4.776 4.255l.073.558.563-.03a2.2 2.2 0 0 1 2.303 2.193c0 .98-.647 1.813-1.536 2.09l-.357.111.014.373c.003.076.005.152.005.228a6.19 6.19 0 0 1-.053.793l-.065.518.517.08c1.574.245 2.725 1.6 2.725 3.186 0 1.778-1.444 3.223-3.222 3.223h-4.39a.625.625 0 1 0 0 1.25h4.39a4.475 4.475 0 0 0 4.472-4.473c0-2.003-1.308-3.7-3.12-4.265.02-.215.032-.432.032-.651 0-.06-.003-.12-.005-.18a3.448 3.448 0 0 0 1.79-3.025 3.453 3.453 0 0 0-3.29-3.445A6.063 6.063 0 0 0 10.705 0zM9.47 10.5a.625.625 0 0 0-.625.625v10.748a.625.625 0 0 0 1.066.442l2.088-2.088 1.398 3.358a.625.625 0 0 0 .816.34l1.809-.752a.626.626 0 0 0 .34-.816l-1.397-3.358 2.789-.387a.625.625 0 0 0 .296-1.1l-7.957-6.874A.625.625 0 0 0 9.47 10.5z"/></svg>
+          </div>
+          <div class="profile-info">
+            <h3 class="profile-name">TryHackMe</h3>
+            <span class="profile-handle">rakeshmh13</span>
+            <span class="profile-desc">CTF challenges & cyber learning paths</span>
+          </div>
+          <div class="profile-arrow">→</div>
+          <div class="profile-glow" aria-hidden="true"></div>
+        </a>
+
+        <!-- HackTheBox -->
+        <a href="https://profile.hackthebox.com/profile/019cf7a9-0947-701a-91cf-62575aa1bc9e" target="_blank" rel="noopener noreferrer" class="profile-card" id="profile-htb" aria-label="HackTheBox Profile">
+          <div class="profile-icon profile-icon-htb">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M11.996 0a1.119 1.119 0 0 0-.057.003 1.334 1.334 0 0 0-.576.2L1.735 5.987A1.1 1.1 0 0 0 1.2 6.928v10.147a1.1 1.1 0 0 0 .534.94l9.627 5.784a1.334 1.334 0 0 0 1.278 0l9.629-5.784a1.1 1.1 0 0 0 .534-.94V6.928a1.1 1.1 0 0 0-.534-.94l-9.629-5.785a1.334 1.334 0 0 0-.643-.2zm.008 2.39l7.676 4.613L12.004 11.6 4.33 7.003zM3.2 8.727l7.837 4.709v9.063L3.2 17.838zm17.613 0v9.11l-7.838 4.662V13.436z"/></svg>
+          </div>
+          <div class="profile-info">
+            <h3 class="profile-name">Hack The Box</h3>
+            <span class="profile-handle">Rakesh M H</span>
+            <span class="profile-desc">Penetration testing & machine pwning</span>
+          </div>
+          <div class="profile-arrow">→</div>
+          <div class="profile-glow" aria-hidden="true"></div>
+        </a>
+
+        <!-- LeetCode -->
+        <a href="https://leetcode.com/u/Rakeshmh/" target="_blank" rel="noopener noreferrer" class="profile-card" id="profile-leetcode" aria-label="LeetCode Profile">
+          <div class="profile-icon profile-icon-lc">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+          </div>
+          <div class="profile-info">
+            <h3 class="profile-name">LeetCode</h3>
+            <span class="profile-handle">Rakeshmh</span>
+            <span class="profile-desc">DSA problem solving & coding challenges</span>
+          </div>
+          <div class="profile-arrow">→</div>
+          <div class="profile-glow" aria-hidden="true"></div>
+        </a>
+
+      </div><!-- /.profiles-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════ -->
+  <section id="about" class="section about-section" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 01</span>
+        <h2 id="about-heading" class="section-title">About<span class="accent">.</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="about-grid">
+        <!-- Bio Column -->
+        <div class="about-bio">
+          <div class="terminal-window">
+            <div class="terminal-bar-mini" aria-hidden="true">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="terminal-file">about_rakesh.md</span>
+            </div>
+            <div class="terminal-content">
+              <p class="prompt-line"><span class="prompt">&gt;</span> whoami</p>
+              <p class="bio-text">
+                I am <span class="accent">Rakesh M H</span>, a B.Tech Computer Science Engineering student specializing in
+                <span class="accent">Cyber Security</span> at Presidency University, Bengaluru. I am passionate about building
+                secure, scalable, and innovative digital solutions that combine cybersecurity, artificial intelligence, and
+                modern software development. I enjoy solving real-world security challenges through hands-on projects, secure
+                coding practices, and continuous learning.
+              </p>
+              <p class="bio-text">
+                My experience includes developing <span class="accent">secure web applications</span>, AI-powered security tools,
+                encryption-based systems, IoT solutions, and full-stack applications. I actively explore ethical hacking,
+                penetration testing, cloud security, digital forensics, and threat detection, while strengthening my skills
+                through industry certifications, <span class="accent">CTF challenges</span>, and practical cybersecurity projects.
+              </p>
+
+              <div class="about-tags">
+                <span class="tag">🔐 Cybersecurity Research</span>
+                <span class="tag">🤖 AI-Powered Security</span>
+                <span class="tag">🌐 Full-Stack Dev</span>
+                <span class="tag">🏴‍☠️ CTF Enthusiast</span>
+                <span class="tag">📡 IoT Projects</span>
+                <span class="tag">☁️ Cloud Security</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Column -->
+        <div class="about-education">
+          <h3 class="subsection-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            Education
+          </h3>
+
+          <div class="timeline">
+            <div class="timeline-item active-edu">
+              <div class="timeline-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+              </div>
+              <div class="timeline-content">
+                <div class="edu-header">
+                  <h4 class="edu-institution">Presidency University</h4>
+                  <span class="edu-period">Aug 2023 – Jul 2027</span>
+                </div>
+                <p class="edu-degree">B.Tech in CSE <span class="accent">(Cyber Security)</span></p>
+                <p class="edu-location">📍 Bangalore, Karnataka</p>
+                <div class="edu-meta">
+                  <span class="edu-badge">CGPA: <strong>7.10</strong></span>
+                  <span class="edu-badge accent-badge">Final Year</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+              </div>
+              <div class="timeline-content">
+                <div class="edu-header">
+                  <h4 class="edu-institution">Siddaganga PU College</h4>
+                  <span class="edu-period">Jul 2020 – May 2022</span>
+                </div>
+                <p class="edu-degree">PUC <span class="accent">(Science)</span></p>
+                <p class="edu-location">📍 Davanagere, Karnataka</p>
+                <div class="edu-meta">
+                  <span class="edu-badge">Percentage: <strong>79.33%</strong></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+              </div>
+              <div class="timeline-content">
+                <div class="edu-header">
+                  <h4 class="edu-institution">Sadhana Eng Med High School</h4>
+                  <span class="edu-period">Jun 2019 – Mar 2020</span>
+                </div>
+                <p class="edu-degree">SSLC <span class="accent">(Class X)</span></p>
+                <p class="edu-location">📍 Holalu, Vijayanagara, Karnataka</p>
+                <div class="edu-meta">
+                  <span class="edu-badge">Percentage: <strong>81.46%</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SKILLS SECTION
+  ═══════════════════════════════════════ -->
+  <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 02</span>
+        <h2 id="skills-heading" class="section-title">Skills<span class="accent">.</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Security Skills -->
+        <div class="skill-category" data-category="security">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="skill-cat-title">Security</h3>
+            <span class="skill-cat-count">10 skills</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag tier-1">OSINT</span>
+            <span class="skill-tag tier-1">Penetration Testing</span>
+            <span class="skill-tag tier-1">Cryptography</span>
+            <span class="skill-tag tier-1">Ethical Hacking</span>
+            <span class="skill-tag tier-2">Digital Forensics</span>
+            <span class="skill-tag tier-2">Threat Detection</span>
+            <span class="skill-tag tier-2">Network Security</span>
+            <span class="skill-tag tier-2">Cloud Security</span>
+            <span class="skill-tag tier-3">CTF Challenges</span>
+            <span class="skill-tag tier-3">Vulnerability Assessment</span>
+          </div>
+        </div>
+
+        <!-- Development Skills -->
+        <div class="skill-category" data-category="dev">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="skill-cat-title">Development</h3>
+            <span class="skill-cat-count">9 skills</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag tier-1">Python</span>
+            <span class="skill-tag tier-1">JavaScript</span>
+            <span class="skill-tag tier-1">HTML / CSS</span>
+            <span class="skill-tag tier-2">Node.js</span>
+            <span class="skill-tag tier-2">React</span>
+            <span class="skill-tag tier-2">Angular</span>
+            <span class="skill-tag tier-2">SQL</span>
+            <span class="skill-tag tier-3">IoT (Raspberry Pi)</span>
+            <span class="skill-tag tier-3">Arduino</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category" data-category="tools">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3 class="skill-cat-title">Tools & Platforms</h3>
+            <span class="skill-cat-count">9 tools</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag tier-1">Burp Suite</span>
+            <span class="skill-tag tier-1">Nmap</span>
+            <span class="skill-tag tier-1">Git / GitHub</span>
+            <span class="skill-tag tier-2">Wireshark</span>
+            <span class="skill-tag tier-2">Metasploit</span>
+            <span class="skill-tag tier-2">Kali Linux</span>
+            <span class="skill-tag tier-2">TryHackMe</span>
+            <span class="skill-tag tier-3">Oracle Cloud</span>
+            <span class="skill-tag tier-3">VS Code</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills / Concepts -->
+        <div class="skill-category" data-category="concepts">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3 class="skill-cat-title">Concepts</h3>
+            <span class="skill-cat-count">8 concepts</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag tier-1">Blockchain</span>
+            <span class="skill-tag tier-1">AI / ML Security</span>
+            <span class="skill-tag tier-2">Secure Coding</span>
+            <span class="skill-tag tier-2">OWASP Top 10</span>
+            <span class="skill-tag tier-2">Zero Trust</span>
+            <span class="skill-tag tier-2">Incident Response</span>
+            <span class="skill-tag tier-3">SOC Operations</span>
+            <span class="skill-tag tier-3">SIEM</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Skill Legend -->
+      <div class="skill-legend" aria-label="Proficiency legend">
+        <span class="legend-item"><span class="skill-tag tier-1 legend-tag">●</span> Proficient</span>
+        <span class="legend-item"><span class="skill-tag tier-2 legend-tag">●</span> Intermediate</span>
+        <span class="legend-item"><span class="skill-tag tier-3 legend-tag">●</span> Familiar</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PROJECTS SECTION
+  ═══════════════════════════════════════ -->
+  <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 03</span>
+        <h2 id="projects-heading" class="section-title">Projects<span class="accent">.</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: QuantumVault -->
+        <article class="project-card" data-index="01" data-modal="proj1" tabindex="0" aria-labelledby="proj1-title">
+          <div class="project-image-wrap">
+            <img src="images/quantum_vault.jpg" alt="QuantumVault — Military-Grade Quantum Cryptographic Security Platform dashboard screenshot" class="project-img" loading="lazy" />
+            <div class="project-img-overlay">
+              <span class="project-num">01</span>
+            </div>
+            <div class="project-links-overlay">
+              <a href="https://quantumvault-vows.onrender.com" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="QuantumVault live demo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/RakeshMH2003/QuantumVault" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="QuantumVault GitHub repository">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                Source Code
+              </a>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header">
+              <h3 id="proj1-title" class="project-title">
+                <span class="project-icon">🛡️</span> QuantumVault
+              </h3>
+              <span class="project-status status-live">Live</span>
+            </div>
+            <p class="project-tagline">Military-Grade Quantum Cryptographic Security Platform</p>
+            <p class="project-desc">
+              A cutting-edge cryptographic vault that implements quantum-resistant encryption algorithms alongside classical AES-256 and RSA. Features secure key generation, encrypted data storage, real-time key management, and a sleek terminal-style dashboard for managing cryptographic operations at scale.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">AES-256</span>
+              <span class="tech-tag">RSA</span>
+              <span class="tech-tag">Quantum Crypto</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://quantumvault-vows.onrender.com" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-primary" id="proj1-demo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/RakeshMH2003/QuantumVault.git" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-ghost" id="proj1-github">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: DriveEase -->
+        <article class="project-card" data-index="02" data-modal="proj2" tabindex="0" aria-labelledby="proj2-title">
+          <div class="project-image-wrap">
+            <img src="images/driveease.jpg" alt="DriveEase — Premium Car Rental Platform interface showing booking and vehicle categories" class="project-img" loading="lazy" />
+            <div class="project-img-overlay">
+              <span class="project-num">02</span>
+            </div>
+            <div class="project-links-overlay">
+              <a href="https://driverace-car.onrender.com" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="DriveEase live demo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/RakeshMH2003/Driverace-car.git" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="DriveEase GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                Source Code
+              </a>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header">
+              <h3 id="proj2-title" class="project-title">
+                <span class="project-icon">🚗</span> DriveEase
+              </h3>
+              <span class="project-status status-live">Live</span>
+            </div>
+            <p class="project-tagline">Premium Car Rental Platform</p>
+            <p class="project-desc">
+              A full-stack premium car rental web application featuring an intuitive booking system, vehicle catalogue with category filtering (SUVs, Sedans, Sports), real-time availability, user authentication, and a responsive admin dashboard for fleet management. Built with modern web technologies and secure payment flow.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">HTML/CSS</span>
+              <span class="tech-tag">Render</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://driverace-car.onrender.com" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-primary" id="proj2-demo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/RakeshMH2003/Driverace-car.git" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-ghost" id="proj2-github">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Web Vuln Dashboard -->
+        <article class="project-card" data-index="03" data-modal="proj3" tabindex="0" aria-labelledby="proj3-title">
+          <div class="project-image-wrap">
+            <img src="images/web_vuln.jpg" alt="Web Vulnerability Dashboard showing scan results, vulnerability charts and severity indicators" class="project-img" loading="lazy" />
+            <div class="project-img-overlay">
+              <span class="project-num">03</span>
+            </div>
+            <div class="project-links-overlay">
+              <a href="https://rakeshmh2003.github.io/web-vuln-dashboard/" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="Web Vulnerability Dashboard live demo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/RakeshMH2003/web-vuln-dashboard.git" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="Web Vuln Dashboard GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                Source Code
+              </a>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header">
+              <h3 id="proj3-title" class="project-title">
+                <span class="project-icon">🔍</span> Web Vulnerability Dashboard
+              </h3>
+              <span class="project-status status-live">Live</span>
+            </div>
+            <p class="project-tagline">Full-Stack Web Security Scanner Dashboard</p>
+            <p class="project-desc">
+              A comprehensive full-stack web security scanner that audits websites for common vulnerabilities including XSS, SQL Injection, CSRF, and insecure headers. Results are displayed in an interactive dashboard with severity classification (Critical/High/Medium/Low), visual charts, and actionable remediation suggestions.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">HTML/CSS</span>
+              <span class="tech-tag">OWASP</span>
+              <span class="tech-tag">XSS Detection</span>
+              <span class="tech-tag">SQL Injection</span>
+              <span class="tech-tag">GitHub Pages</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://rakeshmh2003.github.io/web-vuln-dashboard/" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-primary" id="proj3-demo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/RakeshMH2003/web-vuln-dashboard.git" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-ghost" id="proj3-github">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Smart Plant Monitoring -->
+        <article class="project-card" data-index="04" data-modal="proj4" tabindex="0" aria-labelledby="proj4-title">
+          <div class="project-image-wrap">
+            <img src="images/plant_monitor.jpg" alt="Smart Plant Monitoring System using Raspberry Pi with IoT sensors and email alerts interface" class="project-img" loading="lazy" />
+            <div class="project-img-overlay">
+              <span class="project-num">04</span>
+            </div>
+            <div class="project-links-overlay">
+              <a href="https://rakeshmh2003.github.io/smart-Plant-Monitoring-System-using-Raspberry-Pi-2/" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="Smart Plant Monitor live demo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/RakeshMH2003/smart-Plant-Monitoring-System-using-Raspberry-Pi-2.git" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="Smart Plant Monitor GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                Source Code
+              </a>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header">
+              <h3 id="proj4-title" class="project-title">
+                <span class="project-icon">🌿</span> Smart Plant Monitoring
+              </h3>
+              <span class="project-status status-live">Live</span>
+            </div>
+            <p class="project-tagline">IoT Plant Health Monitor with Instant Email Alerts</p>
+            <p class="project-desc">
+              An IoT solution built on Raspberry Pi that continuously monitors plant health metrics — soil moisture, temperature, humidity, and light levels — using real-time sensors. Triggers instant email alerts when readings fall outside optimal thresholds, with a live web dashboard showing historical sensor data charts and plant status.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Raspberry Pi</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">IoT Sensors</span>
+              <span class="tech-tag">SMTP Alerts</span>
+              <span class="tech-tag">HTML/CSS/JS</span>
+              <span class="tech-tag">GPIO</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://rakeshmh2003.github.io/smart-Plant-Monitoring-System-using-Raspberry-Pi-2/" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-primary" id="proj4-demo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/RakeshMH2003/smart-Plant-Monitoring-System-using-Raspberry-Pi-2.git" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-ghost" id="proj4-github">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: NRF24L01 -->
+        <article class="project-card" data-index="05" data-modal="proj5" tabindex="0" aria-labelledby="proj5-title">
+          <div class="project-image-wrap">
+            <img src="images/nrf24.jpg" alt="NRF24L01 Wireless Communication simulator showing packet flow visualization and Arduino board wiring" class="project-img" loading="lazy" />
+            <div class="project-img-overlay">
+              <span class="project-num">05</span>
+            </div>
+            <div class="project-links-overlay">
+              <a href="https://rakeshmh2003.github.io/NRF24L01-WIRELESS-Communication-with-Aurdino-Bord/" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="NRF24L01 simulator live demo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/RakeshMH2003/NRF24L01-WIRELESS-Communication-with-Aurdino-Bord" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="NRF24L01 GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                Source Code
+              </a>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-header">
+              <h3 id="proj5-title" class="project-title">
+                <span class="project-icon">📡</span> NRF24L01 Wireless Simulator
+              </h3>
+              <span class="project-status status-live">Live</span>
+            </div>
+            <p class="project-tagline">Browser-Based 2.4GHz Wireless Module Simulator + Hardware Bridge</p>
+            <p class="project-desc">
+              A browser-based simulator and real-hardware bridge for the NRF24L01 2.4GHz wireless module built around a Transmitter/Receiver Arduino pair. Visualizes packet flow, RSSI signal strength, ACK/NOACK status, and wiring diagrams — operates entirely in-browser (no hardware required) or connects live to real Arduino boards via Web Serial API.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Web Serial API</span>
+              <span class="tech-tag">Arduino</span>
+              <span class="tech-tag">NRF24L01</span>
+              <span class="tech-tag">HTML/CSS</span>
+              <span class="tech-tag">2.4GHz RF</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://rakeshmh2003.github.io/NRF24L01-WIRELESS-Communication-with-Aurdino-Bord/" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-primary" id="proj5-demo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/RakeshMH2003/NRF24L01-WIRELESS-Communication-with-Aurdino-Bord" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-ghost" id="proj5-github">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /.projects-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CERTIFICATIONS SECTION
+  ═══════════════════════════════════════ -->
+  <section id="certifications" class="section certs-section" aria-labelledby="certs-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 04</span>
+        <h2 id="certs-heading" class="section-title">Certifications<span class="accent">.</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="certs-grid">
+
+        <div class="cert-card" tabindex="0" data-cert="certificates/Coursera GOOGLE CERTIFICATE.pdf" aria-label="Google Cybersecurity Professional Certificate">
+          <div class="cert-icon cert-google">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Google Cybersecurity Professional Certificate</h3>
+            <p class="cert-issuer">Coursera × Google</p>
+            <span class="cert-badge cert-badge-completed">Completed</span>
+          </div>
+          <a href="certificates/Coursera GOOGLE CERTIFICATE.pdf" target="_blank" rel="noopener" class="cert-view-btn" aria-label="View Google Cybersecurity certificate">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Certificate
+          </a>
+          <div class="cert-glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="cert-card" tabindex="0" data-cert="certificates/cehpte-Certificate.pdf" aria-label="Certified Ethical Hacking and Penetration Testing">
+          <div class="cert-icon cert-hack">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Certified Ethical Hacking &amp; Penetration Testing</h3>
+            <p class="cert-issuer">Cappriciosec University (CEHPTE)</p>
+            <span class="cert-badge cert-badge-completed">Completed</span>
+          </div>
+          <a href="certificates/cehpte-Certificate.pdf" target="_blank" rel="noopener" class="cert-view-btn" aria-label="View CEHPTE certificate">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Certificate
+          </a>
+          <div class="cert-glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="cert-card" tabindex="0" data-cert="certificates/BlockChine certificate.pdf" aria-label="Blockchain Foundation Program">
+          <div class="cert-icon cert-blockchain">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Blockchain Foundation Program</h3>
+            <p class="cert-issuer">Kerala Blockchain Academy</p>
+            <span class="cert-badge cert-badge-completed">Completed</span>
+          </div>
+          <a href="certificates/BlockChine certificate.pdf" target="_blank" rel="noopener" class="cert-view-btn" aria-label="View Blockchain certificate">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Certificate
+          </a>
+          <div class="cert-glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="cert-card" tabindex="0" data-cert="certificates/orical ai certificate.pdf" aria-label="Oracle Cloud Infrastructure 2025 AI Foundations Associate">
+          <div class="cert-icon cert-oracle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">OCI 2025 Certified AI Foundations Associate</h3>
+            <p class="cert-issuer">Oracle University</p>
+            <span class="cert-badge cert-badge-completed">Completed</span>
+          </div>
+          <a href="certificates/orical ai certificate.pdf" target="_blank" rel="noopener" class="cert-view-btn" aria-label="View Oracle AI certificate">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Certificate
+          </a>
+          <div class="cert-glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="cert-card" tabindex="0" data-cert="certificates/e councile sqlmap.png" aria-label="SQL Injection Attacks by EC-Council">
+          <div class="cert-icon cert-eccouncil">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">SQL Injection Attacks</h3>
+            <p class="cert-issuer">EC-Council Continuing Education</p>
+            <span class="cert-badge cert-badge-completed">Completed</span>
+          </div>
+          <a href="certificates/e councile sqlmap.png" target="_blank" rel="noopener" class="cert-view-btn" aria-label="View SQL Injection certificate">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Certificate
+          </a>
+          <div class="cert-glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="cert-card" tabindex="0" data-cert="certificates/THM-tryhackme.pdf" aria-label="Advent of Cyber 2025 by TryHackMe">
+          <div class="cert-icon cert-tryhackme">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Advent of Cyber 2025</h3>
+            <p class="cert-issuer">TryHackMe</p>
+            <span class="cert-badge cert-badge-completed">Completed</span>
+          </div>
+          <a href="certificates/THM-tryhackme.pdf" target="_blank" rel="noopener" class="cert-view-btn" aria-label="View TryHackMe certificate">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Certificate
+          </a>
+          <div class="cert-glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="cert-card" tabindex="0" data-cert="certificates/Angular Certificate.pdf" aria-label="Angular Framework by Infosys Springboard">
+          <div class="cert-icon cert-infosys">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Angular Framework</h3>
+            <p class="cert-issuer">Infosys Springboard</p>
+            <span class="cert-badge cert-badge-completed">Completed</span>
+          </div>
+          <a href="certificates/Angular Certificate.pdf" target="_blank" rel="noopener" class="cert-view-btn" aria-label="View Angular certificate">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Certificate
+          </a>
+          <div class="cert-glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="cert-card" tabindex="0" data-cert="certificates/introduce to cybercrime.pdf" aria-label="Introduction to Cybercrime">
+          <div class="cert-icon cert-cybercrime">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Introduction to Cybercrime</h3>
+            <p class="cert-issuer">Online Certification</p>
+            <span class="cert-badge cert-badge-completed">Completed</span>
+          </div>
+          <a href="certificates/introduce to cybercrime.pdf" target="_blank" rel="noopener" class="cert-view-btn" aria-label="View Cybercrime certificate">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Certificate
+          </a>
+          <div class="cert-glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="cert-card" tabindex="0" data-cert="certificates/javascript_intermediate certificate.pdf" aria-label="JavaScript Intermediate">
+          <div class="cert-icon cert-js">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">JavaScript Intermediate</h3>
+            <p class="cert-issuer">HackerRank</p>
+            <span class="cert-badge cert-badge-completed">Completed</span>
+          </div>
+          <a href="certificates/javascript_intermediate certificate.pdf" target="_blank" rel="noopener" class="cert-view-btn" aria-label="View JavaScript certificate">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Certificate
+          </a>
+          <div class="cert-glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="cert-card" tabindex="0" data-cert="certificates/Infosys Springboard.pdf" aria-label="Infosys Springboard Certificate">
+          <div class="cert-icon cert-infosys">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Infosys Springboard</h3>
+            <p class="cert-issuer">Infosys</p>
+            <span class="cert-badge cert-badge-completed">Completed</span>
+          </div>
+          <a href="certificates/Infosys Springboard.pdf" target="_blank" rel="noopener" class="cert-view-btn" aria-label="View Infosys certificate">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Certificate
+          </a>
+          <div class="cert-glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="cert-card" tabindex="0" data-cert="certificates/skillcraft certificate.jpg" aria-label="SkillCraft Certificate">
+          <div class="cert-icon cert-skillcraft">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">SkillCraft Technology</h3>
+            <p class="cert-issuer">SkillCraft</p>
+            <span class="cert-badge cert-badge-completed">Completed</span>
+          </div>
+          <a href="certificates/skillcraft certificate.jpg" target="_blank" rel="noopener" class="cert-view-btn" aria-label="View SkillCraft certificate">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Certificate
+          </a>
+          <div class="cert-glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="cert-card" tabindex="0" data-cert="certificates/untop hackthons.pdf" aria-label="Unstop Hackathons Certificate">
+          <div class="cert-icon cert-hackathon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/><path d="M12 3v12"/><path d="M5 21h14"/></svg>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-title">Unstop Hackathons</h3>
+            <p class="cert-issuer">Unstop</p>
+            <span class="cert-badge cert-badge-completed">Completed</span>
+          </div>
+          <a href="certificates/untop hackthons.pdf" target="_blank" rel="noopener" class="cert-view-btn" aria-label="View Unstop Hackathon certificate">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Certificate
+          </a>
+          <div class="cert-glow" aria-hidden="true"></div>
+        </div>
+
+      </div><!-- /.certs-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════ -->
+  <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 05</span>
+        <h2 id="contact-heading" class="section-title">Contact<span class="accent">.</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="terminal-window">
+            <div class="terminal-bar-mini" aria-hidden="true">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="terminal-file">contact.sh</span>
+            </div>
+            <div class="terminal-content">
+              <p class="prompt-line"><span class="prompt">&gt;</span> ./connect --rakesh</p>
+              <p class="contact-intro">
+                I'm actively looking for <span class="accent">Security Analyst</span>, <span class="accent">SOC Analyst</span>,
+                <span class="accent">Cybersecurity Engineer</span>, and <span class="accent">Software Engineer</span> opportunities.
+                Let's build something secure together!
+              </p>
+
+              <div class="contact-links">
+                <a href="mailto:rakeshmh13@gmail.com" class="contact-link" id="contact-email" aria-label="Send email to rakeshmh13@gmail.com">
+                  <div class="contact-link-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+                  </div>
+                  <div class="contact-link-text">
+                    <span class="contact-link-label">Email</span>
+                    <span class="contact-link-value">rakeshmh13@gmail.com</span>
+                  </div>
+                  <div class="contact-link-arrow">→</div>
+                </a>
+
+                <a href="https://github.com/RakeshMH2003" target="_blank" rel="noopener noreferrer" class="contact-link" id="contact-github" aria-label="Visit GitHub profile">
+                  <div class="contact-link-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  </div>
+                  <div class="contact-link-text">
+                    <span class="contact-link-label">GitHub</span>
+                    <span class="contact-link-value">@RakeshMH2003</span>
+                  </div>
+                  <div class="contact-link-arrow">→</div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/rakesh-m-h/" target="_blank" rel="noopener noreferrer" class="contact-link" id="contact-linkedin" aria-label="Visit LinkedIn profile">
+                  <div class="contact-link-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                  </div>
+                  <div class="contact-link-text">
+                    <span class="contact-link-label">LinkedIn</span>
+                    <span class="contact-link-value">rakesh-m-h</span>
+                  </div>
+                  <div class="contact-link-arrow">→</div>
+                </a>
+
+                <a href="https://www.instagram.com/rakesh_m_h/" target="_blank" rel="noopener noreferrer" class="contact-link" id="contact-instagram" aria-label="Visit Instagram profile">
+                  <div class="contact-link-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                  </div>
+                  <div class="contact-link-text">
+                    <span class="contact-link-label">Instagram</span>
+                    <span class="contact-link-value">@rakesh_m_h</span>
+                  </div>
+                  <div class="contact-link-arrow">→</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contact-form" aria-label="Contact form" novalidate>
+            <div class="form-group">
+              <label for="form-name" class="form-label">
+                <span class="prompt">&gt;</span> Your Name
+              </label>
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="John Doe" required autocomplete="name" />
+              <span class="form-error" id="name-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">
+                <span class="prompt">&gt;</span> Email Address
+              </label>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="john@example.com" required autocomplete="email" />
+              <span class="form-error" id="email-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject" class="form-label">
+                <span class="prompt">&gt;</span> Subject
+              </label>
+              <input type="text" id="form-subject" name="subject" class="form-input" placeholder="Opportunity / Collaboration / Query" required />
+              <span class="form-error" id="subject-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">
+                <span class="prompt">&gt;</span> Message
+              </label>
+              <textarea id="form-message" name="message" class="form-input form-textarea" placeholder="Your message here..." rows="5" required></textarea>
+              <span class="form-error" id="message-error" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit" id="form-submit-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              <span class="btn-text">Send Message</span>
+            </button>
+
+            <div class="form-success" id="form-success" role="status" aria-live="polite" hidden>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Message transmitted successfully! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+
+      </div><!-- /.contact-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">[</span>RMH<span class="logo-bracket">]</span>
+        </div>
+        <p class="footer-copy">
+          © 2026 <span class="accent">Rakesh M H</span> · Built with <span class="accent">❤️</span> &amp; Vanilla JS
+        </p>
+        <p class="footer-tagline">
+          <span class="prompt">&gt;</span> Stay curious. Stay secure. <span class="cursor-blink" aria-hidden="true">_</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       BOOT SCREEN OVERLAY
+  ═══════════════════════════════════════ -->
+  <div id="boot-screen" aria-hidden="true">
+    <div class="boot-content">
+      <div class="boot-logo">[RMH]</div>
+      <div class="boot-lines" id="boot-lines"></div>
+      <div class="boot-bar-wrap"><div class="boot-bar" id="boot-bar"></div></div>
+      <div class="boot-skip">Press any key to skip</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       PROJECT MODAL
+  ═══════════════════════════════════════ -->
+  <div id="project-modal" class="modal hidden" aria-hidden="true" role="dialog" aria-labelledby="modal-proj-title" aria-modal="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content">
+      <div class="modal-topbar">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+        <span class="modal-topbar-title">project_info.sh</span>
+        <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-proj-title" class="modal-proj-title"></h2>
+        <div class="modal-tagline" id="modal-tagline"></div>
+        <pre class="modal-output" id="modal-output" aria-live="polite"></pre>
+        <div class="modal-actions" id="modal-actions"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mouse Trail Canvas -->
+  <canvas id="mouse-trail" aria-hidden="true"></canvas>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
