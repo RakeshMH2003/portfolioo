@@ -5,7 +5,7 @@
 A fully interactive cyberpunk-themed personal portfolio website built with **HTML, CSS & JavaScript** — featuring Matrix rain, boot screen animation, neon glow effects, project modals, and mouse trail.
 
 ## 🔗 Live Demo
-**[](https://portfolioo-peach-theta.vercel.app/))**
+**[https://portfolioo-peach-theta.vercel.app/](https://portfolioo-peach-theta.vercel.app/))**
 
 ---
 
