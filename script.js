@@ -595,7 +595,7 @@ document.addEventListener('keydown', (e) => {
       title: '🛡️ QuantumVault',
       tagline: 'Military-Grade Quantum Cryptographic Security Platform',
       desc: `> PROJECT: QuantumVault\n> STATUS:  Live Production\n> STACK:   Python · Flask · AES-256 · RSA · Quantum Crypto · JS\n\nA cutting-edge cryptographic vault implementing quantum-resistant\nencryption algorithms alongside classical AES-256 and RSA.\n\nFEATURES:\n  ▸ Secure key generation & encrypted data storage\n  ▸ Real-time key management dashboard\n  ▸ Terminal-style UI for cryptographic operations\n  ▸ Quantum-resistant algorithm research integration`,
-      demo: 'https://quantum-vault-sepia.vercel.app/',
+      demo: 'https://quantumvaultss.vercel.app/',
       github: 'https://github.com/RakeshMH2003/QuantumVault.git',
     },
     proj2: {
